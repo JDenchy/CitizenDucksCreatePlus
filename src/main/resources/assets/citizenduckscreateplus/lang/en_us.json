@@ -1,7 +1,5 @@
 {
-  "itemGroup.citizenduckscreateplus": "Example Mod Tab",
-  "block.citizenduckscreateplus.example_block": "Example Block",
-  "item.citizenduckscreateplus.example_item": "Example Item",
+  "item.citizenduckscreateplus.pancakemix": "Pancake Mix",
 
   "citizenduckscreateplus.configuration.title": "CitizenDuck's Create Plus Configs",
   "citizenduckscreateplus.configuration.section.citizenduckscreateplus.common.toml": "CitizenDuck's Create Plus Configs",
