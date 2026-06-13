@@ -1,0 +1,10 @@
+{
+  "subhuman": {
+    "sounds": [
+      {
+        "name": "citizenduckscreateplus:subhuman",
+        "stream": true
+      }
+    ]
+  }
+}

@@ -1,11 +1,14 @@
 {
-  "item.citizenduckscreateplus.pancakemix": "Pancake Mix",
+  "item.citizenduckscreateplus.subhuman_music_disc": "Subhuman Music Disc",
+  "item.citizenduckscreateplus.subhuman_music_disc.desc": "Periphery - Subhuman",
+  "item.citizenduckscreateplus.cookie_dough": "Cookie Dough",
+  "item.citizenduckscreateplus.syrup_bucket": "Syrup Bucket",
+  "block.citizenduckscreateplus.syrup_block": "Syrup",
+  "fluid_type.citizenduckscreateplus.syrup_fluid": "Syrup",
+
+  "creativetab.citizenduckscreateplus.citizenduckscreateplus" : "CitizenDuck's Create Plus",
 
   "citizenduckscreateplus.configuration.title": "CitizenDuck's Create Plus Configs",
   "citizenduckscreateplus.configuration.section.citizenduckscreateplus.common.toml": "CitizenDuck's Create Plus Configs",
-  "citizenduckscreateplus.configuration.section.citizenduckscreateplus.common.toml.title": "CitizenDuck's Create Plus Configs",
-  "citizenduckscreateplus.configuration.items": "Item List",
-  "citizenduckscreateplus.configuration.logDirtBlock": "Log Dirt Block",
-  "citizenduckscreateplus.configuration.magicNumberIntroduction": "Magic Number Text",
-  "citizenduckscreateplus.configuration.magicNumber": "Magic Number"
+  "citizenduckscreateplus.configuration.section.citizenduckscreateplus.common.toml.title": "CitizenDuck's Create Plus Configs"
 }
