@@ -39,14 +39,10 @@ public class BaseFluidType extends FluidType {
     public IClientFluidTypeExtensions getClientFluidTypeExtensions() {
         return new IClientFluidTypeExtensions() {
             @Override
-            public ResourceLocation getStillTexture() {
-                return stillTexture;
-            }
+            public ResourceLocation getStillTexture() { return stillTexture; }
 
             @Override
-            public ResourceLocation getFlowingTexture() {
-                return flowingTexture;
-            }
+            public ResourceLocation getFlowingTexture() { return flowingTexture; }
 
             @Override
             public @Nullable ResourceLocation getOverlayTexture() {

@@ -11,8 +11,8 @@ import org.joml.Vector3f;
 import java.util.function.Supplier;
 
 public class ModFluidTypes {
-    public static final ResourceLocation SYRUP_STILL_RL = ResourceLocation.fromNamespaceAndPath("citizenduckscreateplus", "fluid/syrup_still.png");
-    public static final ResourceLocation SYRUP_FLOWING_RL = ResourceLocation.fromNamespaceAndPath("citizenduckscreateplus", "fluid/syrup_flow.png");
+    public static final ResourceLocation SYRUP_STILL_RL = ResourceLocation.fromNamespaceAndPath(CitizenDucksCreatePlus.MOD_ID, "liquid/syrup_still");
+    public static final ResourceLocation SYRUP_FLOWING_RL = ResourceLocation.fromNamespaceAndPath(CitizenDucksCreatePlus.MOD_ID, "liquid/syrup_flow");
     public static final ResourceLocation WATER_OVERLAY_RL = ResourceLocation.parse("block/water_overlay");
 
     public static final DeferredRegister<FluidType> FLUID_TYPES =

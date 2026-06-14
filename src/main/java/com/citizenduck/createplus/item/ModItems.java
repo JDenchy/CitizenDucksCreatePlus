@@ -16,6 +16,12 @@ public class ModItems {
     public static final DeferredItem<Item> COOKIE_DOUGH = ITEMS.register("cookie_dough",
             () -> new Item(new Item.Properties().food(ModFoodProperties.COOKIE_DOUGH)));
 
+    public static final DeferredItem<Item> ICING_JAR = ITEMS.register("icing_jar",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.ICING_JAR)));
+
+    public static final DeferredItem<Item> CHEESECAKE_FILLING = ITEMS.register("cheesecake_filling",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.CHEESECAKE_FILLING)));
+
     public static final DeferredItem<Item> SUBHUMAN_MUSIC_DISC = ITEMS.register("subhuman_music_disc",
         () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.SUBHUMAN_KEY).stacksTo(1)));
 

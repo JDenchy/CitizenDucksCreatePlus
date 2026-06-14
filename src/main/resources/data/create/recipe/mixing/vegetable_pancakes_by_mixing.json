@@ -1,0 +1,30 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:foods/cabbage"
+    },
+    {
+      "tag": "c:foods/onion"
+    },
+    {
+      "tag": "c:foods/vegetable"
+    },
+    {
+      "tag": "c:foods/vegetable"
+    },
+    {
+      "item": "rusticdelight:batter"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "rusticdelight:vegetable_pancakes"
+    }
+  ]
+}

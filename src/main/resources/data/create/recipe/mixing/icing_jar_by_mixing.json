@@ -1,0 +1,25 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "amount": 250,
+      "tag": "c:milk"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "expandeddelight:glass_jar"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "citizenduckscreateplus:icing_jar"
+    }
+  ]
+}

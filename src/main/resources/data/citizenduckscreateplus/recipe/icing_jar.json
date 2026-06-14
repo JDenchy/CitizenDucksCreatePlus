@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "food",
+  "ingredients": [
+    {
+      "tag": "c:drinks/milk"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "expandeddelight:glass_jar"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "citizenduckscreateplus:icing_jar"
+  }
+}

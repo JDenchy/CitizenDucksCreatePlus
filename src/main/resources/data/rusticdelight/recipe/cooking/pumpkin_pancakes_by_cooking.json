@@ -1,0 +1,26 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "cookingtime": 100,
+  "ingredients": [
+    {
+      "item": "farmersdelight:pumpkin_slice"
+    },
+    {
+      "item": "farmersdelight:pumpkin_slice"
+    },
+    {
+      "item": "citizenduckscreateplus:icing_jar"
+    },
+    {
+      "item": "rusticdelight:batter"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "rusticdelight:pumpkin_pancakes"
+  }
+}

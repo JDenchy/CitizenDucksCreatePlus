@@ -25,6 +25,8 @@ public class ModCreativeModeTabs {
                       //List items that should be assigned to Creative Mode Tab
                         output.accept(ModItems.SUBHUMAN_MUSIC_DISC);
                         output.accept(ModItems.COOKIE_DOUGH);
+                        output.accept(ModItems.ICING_JAR);
+                        output.accept(ModItems.CHEESECAKE_FILLING);
                         output.accept(ModFluids.SYRUP_BUCKET);
                     }).build());
 

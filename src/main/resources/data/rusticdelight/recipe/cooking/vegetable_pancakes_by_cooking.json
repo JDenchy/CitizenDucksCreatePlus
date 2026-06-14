@@ -1,0 +1,29 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "cookingtime": 100,
+  "ingredients": [
+    {
+      "tag": "c:foods/cabbage"
+    },
+    {
+      "tag": "c:foods/onion"
+    },
+    {
+      "tag": "c:foods/vegetable"
+    },
+    {
+      "tag": "c:foods/vegetable"
+    },
+    {
+      "item": "rusticdelight:batter"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "rusticdelight:vegetable_pancakes"
+  }
+}

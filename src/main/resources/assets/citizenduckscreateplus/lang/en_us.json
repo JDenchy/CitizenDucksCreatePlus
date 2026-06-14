@@ -3,8 +3,10 @@
   "item.citizenduckscreateplus.subhuman_music_disc.desc": "Periphery - Subhuman",
   "item.citizenduckscreateplus.cookie_dough": "Cookie Dough",
   "item.citizenduckscreateplus.syrup_bucket": "Syrup Bucket",
+  "item.citizenduckscreateplus.icing_jar": "Icing Jar",
+  "item.citizenduckscreateplus.cheesecake_filling": "Cheesecake Filling",
   "block.citizenduckscreateplus.syrup_block": "Syrup",
-  "fluid_type.citizenduckscreateplus.syrup_fluid": "Syrup",
+  "fluid_type.citizenduckscreateplus.syrup": "Syrup",
 
   "creativetab.citizenduckscreateplus.citizenduckscreateplus" : "CitizenDuck's Create Plus",
 

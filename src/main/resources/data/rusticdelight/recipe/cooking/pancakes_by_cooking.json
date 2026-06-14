@@ -1,0 +1,20 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "cookingtime": 100,
+  "ingredients": [
+    {
+      "item": "rusticdelight:batter"
+    },
+    {
+      "item": "rusticdelight:syrup"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "rusticdelight:pancakes"
+  }
+}

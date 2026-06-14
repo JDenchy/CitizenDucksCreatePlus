@@ -15,6 +15,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.COOKIE_DOUGH.get());
+        basicItem(ModItems.ICING_JAR.get());
+        basicItem(ModItems.CHEESECAKE_FILLING.get());
         basicItem(ModFluids.SYRUP_BUCKET.get());
         basicItem(ModItems.SUBHUMAN_MUSIC_DISC.get());
     }

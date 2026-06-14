@@ -24,7 +24,7 @@ public class ModFluids {
     public static final DeferredRegister<Fluid> FLUIDS =
             DeferredRegister.create(BuiltInRegistries.FLUID, CitizenDucksCreatePlus.MOD_ID);
 
-    public static final Supplier<FlowingFluid> SOURCE_SYRUP = FLUIDS.register("source_syrup",
+    public static final Supplier<FlowingFluid> SOURCE_SYRUP = FLUIDS.register("syrup",
             () -> new BaseFlowingFluid.Source(ModFluids.SYRUP_PROPERTIES));
 
     public static final Supplier<FlowingFluid> FLOWING_SYRUP = FLUIDS.register("flowing_syrup",

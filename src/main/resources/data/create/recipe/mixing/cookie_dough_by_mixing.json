@@ -19,8 +19,10 @@
       "tag": "c:eggs"
     }
   ],
-  "result": {
-    "count": 1,
-    "id": "citizenduckscreateplus:cookie_dough"
-  }
+  "results": [
+    {
+      "count": 1,
+      "id": "citizenduckscreateplus:cookie_dough"
+    }
+  ]
 }
