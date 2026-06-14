@@ -1,0 +1,20 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "farmersdelight:pie_crust"
+  },
+  "cookingtime": 100,
+  "ingredients": [
+    {
+      "item": "expandeddelight:sweet_berry_jelly"
+    },
+    {
+      "item": "citizenduckscreateplus:cheesecake_filling"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:sweet_berry_cheesecake"
+  }
+}
