@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "citizenduckscreateplus:icing"
+    },
+    {
+      "item": "expandeddelight:glass_jar"
+    }
+  ],
+  "results": [
+    {
+      "id": "citizenduckscreateplus:icing_jar"
+    }
+  ]
+}

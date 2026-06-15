@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "food",
+  "ingredients": [
+    {
+      "item": "expandeddelight:sweet_roll"
+    },
+    {
+      "item": "expandeddelight:glow_berry_jelly"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "expandeddelight:glow_berry_sweet_roll"
+  }
+}

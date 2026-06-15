@@ -17,7 +17,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.COOKIE_DOUGH.get());
         basicItem(ModItems.ICING_JAR.get());
         basicItem(ModItems.CHEESECAKE_FILLING.get());
+        basicItem(ModItems.PLAIN_SWEET_ROLL.get());
         basicItem(ModFluids.SYRUP_BUCKET.get());
+        basicItem(ModFluids.ICING_BUCKET.get());
+        basicItem(ModFluids.SEED_OIL_BUCKET.get());
         basicItem(ModItems.SUBHUMAN_MUSIC_DISC.get());
     }
 }

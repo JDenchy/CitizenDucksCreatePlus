@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "citizenduckscreateplus:cookie_dough"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    }
+  ],
+  "results": [
+    {
+      "count": 8,
+      "id": "farmersdelight:sweet_berry_cookie"
+    }
+  ]
+}

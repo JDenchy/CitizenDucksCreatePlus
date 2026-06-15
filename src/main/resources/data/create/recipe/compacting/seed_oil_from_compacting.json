@@ -1,0 +1,23 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "c:seeds"
+    },
+    {
+      "tag": "c:seeds"
+    },
+    {
+      "tag": "c:seeds"
+    },
+    {
+      "tag": "c:seeds"
+    }
+  ],
+  "results": [
+    {
+      "amount": 250,
+      "id": "citizenduckscreateplus:seed_oil"
+    }
+  ]
+}

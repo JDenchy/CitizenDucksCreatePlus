@@ -28,6 +28,10 @@ public class CitizenDucksCreatePlusClient {
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_SYRUP.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SYRUP.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_ICING.get(), RenderType.solid());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_ICING.get(), RenderType.solid());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_SEED_OIL.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SEED_OIL.get(), RenderType.translucent());
         });
     }
 
@@ -35,6 +39,10 @@ public class CitizenDucksCreatePlusClient {
     public static void onClientExtensions(RegisterClientExtensionsEvent event) {
         event.registerFluidType(((BaseFluidType) ModFluidTypes.SYRUP_FLUID_TYPE.get()).getClientFluidTypeExtensions(),
                 ModFluidTypes.SYRUP_FLUID_TYPE.get());
+        event.registerFluidType(((BaseFluidType) ModFluidTypes.ICING_FLUID_TYPE.get()).getClientFluidTypeExtensions(),
+                ModFluidTypes.ICING_FLUID_TYPE.get());
+        event.registerFluidType(((BaseFluidType) ModFluidTypes.SEED_OIL_FLUID_TYPE.get()).getClientFluidTypeExtensions(),
+                ModFluidTypes.SEED_OIL_FLUID_TYPE.get());
     }
 }
 

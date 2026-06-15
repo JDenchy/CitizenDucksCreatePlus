@@ -20,13 +20,12 @@ public class ModFluidTagsProvider extends FluidTagsProvider {
     protected void addTags(HolderLookup.Provider pProvider) {
         tag(FluidTags.WATER)
                 .add(ModFluids.SOURCE_SYRUP.get())
-                .add(ModFluids.FLOWING_SYRUP.get());
+                .add(ModFluids.FLOWING_SYRUP.get())
+                .add(ModFluids.SOURCE_SEED_OIL.get())
+                .add(ModFluids.FLOWING_SEED_OIL.get());
 
-        //Icing gets lava physics
-        /*
         tag(FluidTags.LAVA)
                 .add(ModFluids.SOURCE_ICING.get())
                 .add(ModFluids.FLOWING_ICING.get());
-         */
     }
 }

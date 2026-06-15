@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "citizenduckscreateplus:cookie_dough"
+    },
+    {
+      "item": "rusticdelight:syrup"
+    }
+  ],
+  "results": [
+    {
+      "count": 8,
+      "id": "rusticdelight:syrup_cookie"
+    }
+  ]
+}

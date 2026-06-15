@@ -3,21 +3,18 @@
   "heat_requirement": "heated",
   "ingredients": [
     {
-      "item": "minecraft:sugar"
-    },
-    {
-      "tag": "rusticdelight:syrup_ingredients"
+      "item": "citizenduckscreateplus:cookie_dough"
     },
     {
       "type": "neoforge:single",
       "amount": 250,
-      "fluid": "minecraft:water"
+      "fluid": "citizenduckscreateplus:syrup"
     }
   ],
   "results": [
     {
-      "amount": 250,
-      "id": "citizenduckscreateplus:syrup"
+      "count": 8,
+      "id": "rusticdelight:syrup_cookie"
     }
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "citizenduckscreateplus:cookie_dough"
+    },
+    {
+      "item": "create_confectionery:cocoa_powder"
+    },
+    {
+      "item": "minecraft:cocoa_beans"
+    }
+  ],
+  "results": [
+    {
+      "count": 8,
+      "id": "expandeddelight:chocolate_cookie"
+    }
+  ]
+}

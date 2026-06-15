@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "citizenduckscreateplus:item/plain_sweet_roll"
+  }
+}

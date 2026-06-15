@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "citizenduckscreateplus:seed_oil"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "results": [
+    {
+      "id": "rusticdelight:cooking_oil"
+    }
+  ]
+}

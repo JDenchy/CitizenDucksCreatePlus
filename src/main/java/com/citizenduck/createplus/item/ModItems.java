@@ -22,6 +22,9 @@ public class ModItems {
     public static final DeferredItem<Item> CHEESECAKE_FILLING = ITEMS.register("cheesecake_filling",
             () -> new Item(new Item.Properties().food(ModFoodProperties.CHEESECAKE_FILLING)));
 
+    public static final DeferredItem<Item> PLAIN_SWEET_ROLL = ITEMS.register("plain_sweet_roll",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.PLAIN_SWEET_ROLL)));
+
     public static final DeferredItem<Item> SUBHUMAN_MUSIC_DISC = ITEMS.register("subhuman_music_disc",
         () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.SUBHUMAN_KEY).stacksTo(1)));
 

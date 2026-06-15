@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "citizenduckscreateplus:icing"
+    },
+    {
+      "item": "citizenduckscreateplus:plain_sweet_roll"
+    }
+  ],
+  "results": [
+    {
+      "id": "expandeddelight:sweet_roll"
+    }
+  ]
+}

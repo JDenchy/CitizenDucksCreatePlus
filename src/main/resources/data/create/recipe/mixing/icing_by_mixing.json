@@ -11,15 +11,12 @@
     },
     {
       "item": "minecraft:sugar"
-    },
-    {
-      "item": "expandeddelight:glass_jar"
     }
   ],
   "results": [
     {
-      "count": 1,
-      "id": "citizenduckscreateplus:icing_jar"
+      "amount": 250,
+      "id": "citizenduckscreateplus:icing"
     }
   ]
 }

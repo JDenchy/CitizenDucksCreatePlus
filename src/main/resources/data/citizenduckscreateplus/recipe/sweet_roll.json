@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "food",
+  "ingredients": [
+    {
+      "item": "citizenduckscreateplus:plain_sweet_roll"
+    },
+    {
+      "item": "citizenduckscreateplus:icing_jar"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "expandeddelight:sweet_roll"
+  }
+}

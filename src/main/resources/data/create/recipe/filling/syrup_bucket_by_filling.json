@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 1000,
+      "fluid": "citizenduckscreateplus:syrup"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "results": [
+    {
+      "id": "citizenduckscreateplus:syrup_bucket"
+    }
+  ]
+}

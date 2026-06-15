@@ -1,0 +1,26 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "farmersdelight:pie_crust"
+  },
+  "cookingtime": 100,
+  "ingredients": [
+    {
+      "tag": "rusticdelight:cherry_blossom_ingredients"
+    },
+    {
+      "tag": "rusticdelight:cherry_blossom_ingredients"
+    },
+    {
+      "tag": "rusticdelight:cherry_blossom_ingredients"
+    },
+    {
+      "item": "citizenduckscreateplus:cheesecake_filling"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "rusticdelight:cherry_blossom_cheesecake"
+  }
+}

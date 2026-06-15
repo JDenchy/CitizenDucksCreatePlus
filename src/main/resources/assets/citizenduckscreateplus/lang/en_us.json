@@ -1,12 +1,21 @@
 {
   "item.citizenduckscreateplus.subhuman_music_disc": "Subhuman Music Disc",
   "item.citizenduckscreateplus.subhuman_music_disc.desc": "Periphery - Subhuman",
+
   "item.citizenduckscreateplus.cookie_dough": "Cookie Dough",
-  "item.citizenduckscreateplus.syrup_bucket": "Syrup Bucket",
-  "item.citizenduckscreateplus.icing_jar": "Icing Jar",
-  "item.citizenduckscreateplus.cheesecake_filling": "Cheesecake Filling",
-  "block.citizenduckscreateplus.syrup_block": "Syrup",
+
   "fluid_type.citizenduckscreateplus.syrup": "Syrup",
+  "item.citizenduckscreateplus.syrup_bucket": "Syrup Bucket",
+
+  "fluid_type.citizenduckscreateplus.icing": "Icing",
+  "item.citizenduckscreateplus.icing_bucket": "Icing Bucket",
+  "item.citizenduckscreateplus.icing_jar": "Icing Jar",
+
+  "fluid_type.citizenduckscreateplus.seed_oil": "Seed Oil",
+  "item.citizenduckscreateplus.seed_oil_bucket": "Seed Oil Bucket",
+
+  "item.citizenduckscreateplus.cheesecake_filling": "Cheesecake Filling",
+  "item.citizenduckscreateplus.plain_sweet_roll": "Plain Sweet Roll",
 
   "creativetab.citizenduckscreateplus.citizenduckscreateplus" : "CitizenDuck's Create Plus",
 

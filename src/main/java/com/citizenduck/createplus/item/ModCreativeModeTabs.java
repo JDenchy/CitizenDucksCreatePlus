@@ -27,7 +27,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.COOKIE_DOUGH);
                         output.accept(ModItems.ICING_JAR);
                         output.accept(ModItems.CHEESECAKE_FILLING);
+                        output.accept(ModItems.PLAIN_SWEET_ROLL);
                         output.accept(ModFluids.SYRUP_BUCKET);
+                        output.accept(ModFluids.ICING_BUCKET);
+                        output.accept(ModFluids.SEED_OIL_BUCKET);
                     }).build());
 
 

@@ -14,4 +14,7 @@ public class ModFoodProperties {
 
     public static final FoodProperties CHEESECAKE_FILLING = new FoodProperties.Builder().nutrition(1).saturationModifier(0f)
             .effect(() -> new MobEffectInstance(MobEffects.POISON, 200), 0.20f).build();
+
+    public static final FoodProperties PLAIN_SWEET_ROLL = new FoodProperties.Builder().nutrition(1).saturationModifier(0f)
+            .effect(() -> new MobEffectInstance(MobEffects.SATURATION, 200), 0f).build();
 }

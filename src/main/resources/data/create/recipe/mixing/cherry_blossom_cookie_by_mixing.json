@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "citizenduckscreateplus:cookie_dough"
+    },
+    {
+      "tag": "rusticdelight:cherry_blossom_ingredients"
+    }
+  ],
+  "results": [
+    {
+      "count": 8,
+      "id": "rusticdelight:cherry_blossom_cookie"
+    }
+  ]
+}

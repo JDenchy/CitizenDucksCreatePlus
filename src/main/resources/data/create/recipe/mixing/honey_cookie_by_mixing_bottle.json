@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "citizenduckscreateplus:cookie_dough"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    }
+  ],
+  "results": [
+    {
+      "count": 8,
+      "id": "farmersdelight:honey_cookie"
+    }
+  ]
+}

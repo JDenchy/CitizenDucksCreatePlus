@@ -1,0 +1,21 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:doughs/wheat"
+    },
+    {
+      "item": "expandeddelight:cinnamon"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "citizenduckscreateplus:plain_sweet_roll"
+    }
+  ]
+}
