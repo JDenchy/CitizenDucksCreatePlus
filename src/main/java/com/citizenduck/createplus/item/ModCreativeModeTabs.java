@@ -19,11 +19,12 @@ public class ModCreativeModeTabs {
 
     //Assigns parameters to Creative Mode Tab
     public static final Supplier<CreativeModeTab> CITIZENDUCKS_CREATE_PLUS_TAB = CREATIVE_MODE_TAB.register("citizenducks_create_plus_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SUBHUMAN_MUSIC_DISC.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.OVEN.get()))
                     .title(Component.translatable("creativetab.citizenduckscreateplus.citizenduckscreateplus"))
                     .displayItems((itemDisplayParameters, output) -> {
                       //List items that should be assigned to Creative Mode Tab
                         output.accept(ModItems.SUBHUMAN_MUSIC_DISC);
+                        output.accept(ModBlocks.OVEN);
                         output.accept(ModItems.COOKIE_DOUGH);
                         output.accept(ModItems.ICING_JAR);
                         output.accept(ModItems.CHEESECAKE_FILLING);

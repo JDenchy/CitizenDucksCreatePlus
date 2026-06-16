@@ -1,18 +1,26 @@
 package com.citizenduck.createplus.item;
 
 import com.citizenduck.createplus.CitizenDucksCreatePlus;
+import com.citizenduck.createplus.block.ModBlocks;
 import com.citizenduck.createplus.sound.ModSounds;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.function.Supplier;
+
 public class ModItems {
-    //Construct the custom item
+    // Construct the custom item Deferred Register
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(CitizenDucksCreatePlus.MOD_ID);
 
-    //Assign properties to custom item
+    // Helper methods
+    public static Item.Properties basicItem() {
+        return new Item.Properties();
+    }
+    // Items
     public static final DeferredItem<Item> COOKIE_DOUGH = ITEMS.register("cookie_dough",
             () -> new Item(new Item.Properties().food(ModFoodProperties.COOKIE_DOUGH)));
 
@@ -27,7 +35,6 @@ public class ModItems {
 
     public static final DeferredItem<Item> SUBHUMAN_MUSIC_DISC = ITEMS.register("subhuman_music_disc",
         () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.SUBHUMAN_KEY).stacksTo(1)));
-
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
