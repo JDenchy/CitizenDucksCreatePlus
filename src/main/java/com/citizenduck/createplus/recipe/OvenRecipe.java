@@ -1,0 +1,221 @@
+package com.citizenduck.createplus.recipe;
+
+import com.citizenduck.createplus.block.ModBlocks;
+import com.citizenduck.createplus.client.OvenRecipeBookTab;
+import com.citizenduck.createplus.registry.ModRecipeSerializers;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.NonNullList;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.level.Level;
+import net.neoforged.neoforge.common.util.RecipeMatcher;
+import net.neoforged.neoforge.items.wrapper.RecipeWrapper;
+
+import javax.annotation.Nullable;
+
+public class OvenRecipe implements Recipe<RecipeWrapper>
+{
+    public static final int INPUT_SLOTS = 6;
+
+    private final String group;
+    private final OvenRecipeBookTab tab;
+    private final NonNullList<Ingredient> inputItems;
+    private final ItemStack output;
+    private final ItemStack container;
+    private final ItemStack containerOverride;
+    private final float experience;
+    private final int cookTime;
+
+    public OvenRecipe(String group, @Nullable OvenRecipeBookTab tab, NonNullList<Ingredient> inputItems, ItemStack output, ItemStack container, float experience, int cookTime) {
+        this.group = group;
+        this.tab = tab;
+        this.inputItems = inputItems;
+        this.output = output;
+
+        if (!container.isEmpty()) {
+            this.container = container;
+        } else if (!output.getCraftingRemainingItem().isEmpty()) {
+            this.container = output.getCraftingRemainingItem();
+        } else {
+            this.container = ItemStack.EMPTY;
+        }
+
+        this.containerOverride = container;
+        this.experience = experience;
+        this.cookTime = cookTime;
+    }
+
+    @Override
+    public String getGroup() {
+        return this.group;
+    }
+
+    @Nullable
+    public OvenRecipeBookTab getRecipeBookTab() {
+        return this.tab;
+    }
+
+    @Override
+    public NonNullList<Ingredient> getIngredients() {
+        return this.inputItems;
+    }
+
+    @Override
+    public ItemStack getResultItem(HolderLookup.Provider provider) {
+        return this.output;
+    }
+
+    public ItemStack getOutputContainer() {
+        return this.container;
+    }
+
+    public ItemStack getContainerOverride() {
+        return this.containerOverride;
+    }
+
+    @Override
+    public ItemStack assemble(RecipeWrapper inv, HolderLookup.Provider provider) {
+        return this.output.copy();
+    }
+
+    public float getExperience() {
+        return this.experience;
+    }
+
+    public int getCookTime() {
+        return this.cookTime;
+    }
+
+    @Override
+    public boolean matches(RecipeWrapper inv, Level level) {
+        java.util.List<ItemStack> inputs = new java.util.ArrayList<>();
+        int i = 0;
+
+        for (int j = 0; j < INPUT_SLOTS; ++j) {
+            ItemStack itemstack = inv.getItem(j);
+            if (!itemstack.isEmpty()) {
+                ++i;
+                inputs.add(itemstack);
+            }
+        }
+        return i == this.inputItems.size() && RecipeMatcher.findMatches(inputs, this.inputItems) != null;
+    }
+
+    @Override
+    public boolean canCraftInDimensions(int width, int height) {
+        return width * height >= this.inputItems.size();
+    }
+
+    @Override
+    public RecipeSerializer<?> getSerializer() {
+        return ModRecipeSerializers.BAKING.get();
+    }
+
+    @Override
+    public RecipeType<?> getType() {
+        return ModRecipeTypes.BAKING.get();
+    }
+
+    @Override
+    public ItemStack getToastSymbol() {
+        return new ItemStack(ModBlocks.OVEN.get());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        OvenRecipe that = (OvenRecipe) o;
+
+        if (Float.compare(that.getExperience(), getExperience()) != 0) return false;
+        if (getCookTime() != that.getCookTime()) return false;
+        if (!getGroup().equals(that.getGroup())) return false;
+        if (tab != that.tab) return false;
+        if (!inputItems.equals(that.inputItems)) return false;
+        if (!output.equals(that.output)) return false;
+        return container.equals(that.container);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getGroup().hashCode();
+        result = 31 * result + (getRecipeBookTab() != null ? getRecipeBookTab().hashCode() : 0);
+        result = 31 * result + inputItems.hashCode();
+        result = 31 * result + output.hashCode();
+        result = 31 * result + container.hashCode();
+        result = 31 * result + (getExperience() != 0.0f ? Float.floatToIntBits(getExperience()) : 0);
+        result = 31 * result + getCookTime();
+        return result;
+    }
+
+    public static class Serializer implements RecipeSerializer<OvenRecipe>
+    {
+        private static final MapCodec<OvenRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
+                Codec.STRING.optionalFieldOf("group", "").forGetter(OvenRecipe::getGroup),
+                OvenRecipeBookTab.CODEC.optionalFieldOf("recipe_book_tab", OvenRecipeBookTab.MISC).forGetter(OvenRecipe::getRecipeBookTab),
+                Ingredient.LIST_CODEC_NONEMPTY.fieldOf("ingredients").xmap(ingredients -> {
+                    NonNullList<Ingredient> nonNullList = NonNullList.create();
+                    nonNullList.addAll(ingredients);
+                    return nonNullList;
+                }, ingredients -> ingredients).forGetter(OvenRecipe::getIngredients),
+                ItemStack.STRICT_CODEC.fieldOf("result").forGetter(r -> r.output),
+                ItemStack.STRICT_CODEC.optionalFieldOf("container", ItemStack.EMPTY).forGetter(OvenRecipe::getContainerOverride),
+                Codec.FLOAT.optionalFieldOf("experience", 0.0F).forGetter(OvenRecipe::getExperience),
+                Codec.INT.optionalFieldOf("cookingtime", 200).forGetter(OvenRecipe::getCookTime)
+        ).apply(inst, OvenRecipe::new));
+
+        public static final StreamCodec<RegistryFriendlyByteBuf, OvenRecipe> STREAM_CODEC = StreamCodec.of(OvenRecipe.Serializer::toNetwork, OvenRecipe.Serializer::fromNetwork);
+
+        public Serializer() {
+        }
+
+        @Override
+        public MapCodec<OvenRecipe> codec() {
+            return CODEC;
+        }
+
+        @Override
+        public StreamCodec<RegistryFriendlyByteBuf, OvenRecipe> streamCodec() {
+            return STREAM_CODEC;
+        }
+
+        private static OvenRecipe fromNetwork(RegistryFriendlyByteBuf buffer) {
+            String group = buffer.readUtf();
+            OvenRecipeBookTab tab = OvenRecipeBookTab.findByName(buffer.readUtf());
+            int i = buffer.readVarInt();
+            NonNullList<Ingredient> inputItems = NonNullList.withSize(i, Ingredient.EMPTY);
+
+            inputItems.replaceAll(ignored -> Ingredient.CONTENTS_STREAM_CODEC.decode(buffer));
+
+            ItemStack output = ItemStack.STREAM_CODEC.decode(buffer);
+            ItemStack container = ItemStack.OPTIONAL_STREAM_CODEC.decode(buffer);
+            float experience = buffer.readFloat();
+            int cookTime = buffer.readVarInt();
+            return new OvenRecipe(group, tab, inputItems, output, container, experience, cookTime);
+        }
+
+        private static void toNetwork(RegistryFriendlyByteBuf buffer, OvenRecipe recipe) {
+            buffer.writeUtf(recipe.group);
+            buffer.writeUtf(recipe.tab != null ? recipe.tab.toString() : "");
+            buffer.writeVarInt(recipe.inputItems.size());
+
+            for (Ingredient ingredient : recipe.inputItems) {
+                Ingredient.CONTENTS_STREAM_CODEC.encode(buffer, ingredient);
+            }
+
+            ItemStack.STREAM_CODEC.encode(buffer, recipe.output);
+            ItemStack.OPTIONAL_STREAM_CODEC.encode(buffer, recipe.container);
+            buffer.writeFloat(recipe.experience);
+            buffer.writeVarInt(recipe.cookTime);
+        }
+    }
+}

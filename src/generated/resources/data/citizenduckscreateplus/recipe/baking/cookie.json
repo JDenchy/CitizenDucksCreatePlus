@@ -1,0 +1,18 @@
+{
+  "type": "citizenduckscreateplus:baking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "citizenduckscreateplus:cookie_dough"
+    },
+    {
+      "item": "minecraft:cocoa_beans"
+    }
+  ],
+  "recipe_book_tab": "snacks",
+  "result": {
+    "count": 8,
+    "id": "minecraft:cookie"
+  }
+}

@@ -5,6 +5,8 @@ import com.citizenduck.createplus.fluid.ModFluidTypes;
 import com.citizenduck.createplus.fluid.ModFluids;
 import com.citizenduck.createplus.item.ModCreativeModeTabs;
 import com.citizenduck.createplus.item.ModItems;
+import com.citizenduck.createplus.recipe.ModRecipeTypes;
+import com.citizenduck.createplus.registry.ModRecipeSerializers;
 import com.citizenduck.createplus.sound.ModSounds;
 import com.citizenduck.createplus.utility.Config;
 import org.slf4j.Logger;
@@ -49,6 +51,8 @@ public class CitizenDucksCreatePlus {
         ModSounds.register(modEventBus);
         ModFluidTypes.register(modEventBus);
         ModFluids.register(modEventBus);
+        ModRecipeTypes.RECIPE_TYPES.register(modEventBus);
+        ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
