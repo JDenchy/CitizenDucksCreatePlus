@@ -32,6 +32,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModFluids.SYRUP_BUCKET);
                         output.accept(ModFluids.ICING_BUCKET);
                         output.accept(ModFluids.SEED_OIL_BUCKET);
+                        output.accept(ModBlocks.PEDESTAL);
                     }).build());
 
 

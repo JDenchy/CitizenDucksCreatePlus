@@ -2,6 +2,7 @@ package com.citizenduck.createplus.block;
 
 import com.citizenduck.createplus.CitizenDucksCreatePlus;
 import com.citizenduck.createplus.block.custom.OvenBlock;
+import com.citizenduck.createplus.block.custom.PedestalBlock;
 import com.citizenduck.createplus.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -29,6 +30,9 @@ public class ModBlocks
 
     public static final DeferredBlock<Block> OVEN = registerBlock("oven",
             () -> new OvenBlock(BlockBehaviour.Properties.of().strength(2).sound(SoundType.DEEPSLATE_BRICKS)));
+
+    public static final DeferredBlock<Block> PEDESTAL = registerBlock("pedestal",
+            () -> new PedestalBlock(BlockBehaviour.Properties.of().noOcclusion()));
 
     // Workstations
     /*

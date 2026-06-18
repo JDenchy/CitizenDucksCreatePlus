@@ -1,6 +1,7 @@
 package com.citizenduck.createplus;
 
 import com.citizenduck.createplus.block.ModBlocks;
+import com.citizenduck.createplus.block.entity.ModBlockEntities;
 import com.citizenduck.createplus.fluid.ModFluidTypes;
 import com.citizenduck.createplus.fluid.ModFluids;
 import com.citizenduck.createplus.item.ModCreativeModeTabs;
@@ -48,6 +49,7 @@ public class CitizenDucksCreatePlus {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         ModSounds.register(modEventBus);
         ModFluidTypes.register(modEventBus);
         ModFluids.register(modEventBus);

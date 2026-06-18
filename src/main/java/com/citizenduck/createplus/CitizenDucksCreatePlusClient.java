@@ -1,5 +1,8 @@
 package com.citizenduck.createplus;
 
+import com.citizenduck.createplus.block.ModBlocks;
+import com.citizenduck.createplus.block.entity.ModBlockEntities;
+import com.citizenduck.createplus.block.entity.renderer.PedestalBlockEntityRenderer;
 import com.citizenduck.createplus.fluid.BaseFluidType;
 import com.citizenduck.createplus.fluid.ModFluidTypes;
 import com.citizenduck.createplus.fluid.ModFluids;
@@ -10,6 +13,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 
 // This class will not load on dedicated servers. Accessing client side code from here is safe.
@@ -39,6 +43,11 @@ public class CitizenDucksCreatePlusClient {
                 ModFluidTypes.ICING_FLUID_TYPE.get());
         event.registerFluidType(((BaseFluidType) ModFluidTypes.SEED_OIL_FLUID_TYPE.get()).getClientFluidTypeExtensions(),
                 ModFluidTypes.SEED_OIL_FLUID_TYPE.get());
+    }
+
+    @SubscribeEvent
+    public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);
     }
 }
 
