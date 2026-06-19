@@ -18,8 +18,11 @@
   "item.citizenduckscreateplus.plain_sweet_roll": "Plain Sweet Roll",
 
   "block.citizenduckscreateplus.oven": "Oven",
+  "blockentity.citizenduckscreateplus.oven": "Oven",
   "subtitles.citizenduckscreateplus.block.oven.crackle": "Oven Crackles",
+
   "block.citizenduckscreateplus.pedestal": "Pedestal",
+  "blockentity.citizenduckscreateplus.pedestal": "Pedestal",
 
   "creativetab.citizenduckscreateplus.citizenduckscreateplus" : "CitizenDuck's Create Plus",
 

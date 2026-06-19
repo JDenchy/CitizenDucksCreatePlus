@@ -27,11 +27,7 @@ public class BakingRecipes {
     }
 
     private static void bakeCheesecake(RecipeOutput output) {
-        OvenRecipeBuilder.bakingRecipe(Items.COOKIE, 8, FAST_BAKING, SMALL_EXP)
-                .addIngredient(ModItems.COOKIE_DOUGH)
-                .addIngredient(Items.COCOA_BEANS)
-                .setRecipeBookTab(OvenRecipeBookTab.SNACKS)
-                .saveToCDCP(output);
+
     }
 
     private static void bakeCookies(RecipeOutput output) {

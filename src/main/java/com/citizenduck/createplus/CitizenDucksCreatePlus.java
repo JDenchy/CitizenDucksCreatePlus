@@ -8,6 +8,7 @@ import com.citizenduck.createplus.item.ModCreativeModeTabs;
 import com.citizenduck.createplus.item.ModItems;
 import com.citizenduck.createplus.recipe.ModRecipeTypes;
 import com.citizenduck.createplus.registry.ModRecipeSerializers;
+import com.citizenduck.createplus.screen.ModMenuTypes;
 import com.citizenduck.createplus.sound.ModSounds;
 import com.citizenduck.createplus.utility.Config;
 import org.slf4j.Logger;
@@ -50,6 +51,7 @@ public class CitizenDucksCreatePlus {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
         ModSounds.register(modEventBus);
         ModFluidTypes.register(modEventBus);
         ModFluids.register(modEventBus);

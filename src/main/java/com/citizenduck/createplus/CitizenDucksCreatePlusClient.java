@@ -6,6 +6,9 @@ import com.citizenduck.createplus.block.entity.renderer.PedestalBlockEntityRende
 import com.citizenduck.createplus.fluid.BaseFluidType;
 import com.citizenduck.createplus.fluid.ModFluidTypes;
 import com.citizenduck.createplus.fluid.ModFluids;
+import com.citizenduck.createplus.screen.ModMenuTypes;
+import com.citizenduck.createplus.screen.custom.OvenScreen;
+import com.citizenduck.createplus.screen.custom.PedestalScreen;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.neoforged.api.distmarker.Dist;
@@ -14,6 +17,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 
 // This class will not load on dedicated servers. Accessing client side code from here is safe.
@@ -48,6 +52,12 @@ public class CitizenDucksCreatePlusClient {
     @SubscribeEvent
     public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);
+    }
+
+    @SubscribeEvent
+    public static void registerScreens(RegisterMenuScreensEvent event) {
+        event.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
+        event.register(ModMenuTypes.OVEN_MENU.get(), OvenScreen::new);
     }
 }
 

@@ -2,7 +2,9 @@ package com.citizenduck.createplus.block.entity;
 
 import com.citizenduck.createplus.CitizenDucksCreatePlus;
 import com.citizenduck.createplus.block.ModBlocks;
+import com.citizenduck.createplus.block.custom.OvenBlock;
 import com.citizenduck.createplus.block.custom.PedestalBlock;
+import com.citizenduck.createplus.block.entity.custom.OvenBlockEntity;
 import com.citizenduck.createplus.block.entity.custom.PedestalBlockEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Block;
@@ -19,6 +21,10 @@ public class ModBlockEntities {
     public static final Supplier<BlockEntityType<PedestalBlockEntity>> PEDESTAL_BE =
             BLOCK_ENTITIES.register("pedestal_be", () -> BlockEntityType.Builder.of(
                     PedestalBlockEntity::new, ModBlocks.PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<OvenBlockEntity>> OVEN_BE =
+            BLOCK_ENTITIES.register("oven_be", () -> BlockEntityType.Builder.of(
+                    OvenBlockEntity::new, ModBlocks.OVEN.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
